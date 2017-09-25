@@ -17,18 +17,16 @@ END IF;
 END fib;
 /
 
--- TODO Creating a function which returns the lowest number among two numbers
--- logic if n>m return m else n
---TO RUN
--- SELECT LOWNUM(n.m) FROM DUAL;
-
-
-CREATE OR REPLACE FUNCTION lowNum(n INTEGER,m INTEGER) RETURN INTEGER IS
+--TODO Create a function to find lowest of three numbers
+--SELECT MinOfThree(1,2,5) FROM dual;
+CREATE OR REPLACE FUNCTION MinOfThree(A INTEGER,B INTEGER,C INTEGER) RETURN INTEGER IS
 BEGIN
-	IF (n>m) THEN
-		RETURN m;
+	IF (A<B) AND (A<C) THEN
+		RETURN A;
+	ELSIF (B<A) AND (B<C) THEN
+		RETURN B;
 	ELSE
-		RETURN n;
+		RETURN C;
 	END IF;
-END lowNum;
+END MinOfThree;
 /

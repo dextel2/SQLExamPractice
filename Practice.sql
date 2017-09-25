@@ -101,3 +101,18 @@ BEGIN
 	DBMS_OUTPUT.PUT_LINE('HIGHEST NUMBER = '||X);
 END;
 /
+
+
+-- TODO Create a Procedure to Automate the JOB
+-- Learning, might result into multiple commits on git
+-- MISTAKE 1 v_count_number should be :=0 and not = 0
+CREATE PROCEDURE P1 
+IS
+    v_count_number := 0;
+BEGIN
+    SELECT COUNT(1) into v_count FROM DEPOSIT;
+    if v_count := 0 THEN
+    --DO NOTHING FOR NOW
+    END IF;
+END;
+/
