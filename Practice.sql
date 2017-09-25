@@ -1,3 +1,4 @@
+-- Simple If Else PL/SQL Program to find status of student on basis of input grade
 
 DECLARE
 	GRADE CHAR(1) := 'A';
@@ -14,7 +15,7 @@ BEGIN
 	END;
 /
 
--- E
+--Simply printing the variables
 
 DECLARE
 	NAME VARCHAR(20) := 'YASH KARANKE';
@@ -24,7 +25,8 @@ BEGIN
 	DBMS_OUTPUT.PUT_LINE(ADDRESS);
 END;
 /
--- F
+--Array Program to Store Names and Marks of Two Students
+
 DECLARE
 	TYPE NAMESARRAY IS VARRAY(5) OF VARCHAR(10);
 	TYPE GRADES IS VARRAY(5) OF INTEGER;
@@ -68,7 +70,7 @@ END;
 
 
 
--- MAX OF 4 NUMBERS
+-- PROCEDURE PROGRAM TO FIND OUT MAX OF 4 NUMBERS
 
 
 DECLARE
