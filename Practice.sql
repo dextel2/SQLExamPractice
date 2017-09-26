@@ -107,10 +107,12 @@ END;
 -- Learning, might result into multiple commits on git
 -- MISTAKE 1 v_count_number should be :=0 and not = 0
 
-CREATE PROCEDURE p1
-IS 
-  v_count number := 0;
-BEGIN
-  select count(1) into v_count from DEPOSIT;
-END;
-/
+	CREATE OR REPLACE PROCEDURE p2 (totall in number,outpu in number)
+	IS 
+	BEGIN
+	select count(*) into outpu from DEPOSIT;
+	DBMS_OUTPUT.PUT_LINE("Count " || outpu);
+	END P2;
+	/
+
+
