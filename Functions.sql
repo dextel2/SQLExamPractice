@@ -43,3 +43,17 @@ BEGIN
    RETURN tot; 
 END; 
 / 
+
+-- Calling a function
+
+-- Method 1
+DECLARE 
+	c number(7);
+BEGIN
+	c : count_nm();
+	dbms_output.put_line('Total Student having 65 marks' ||c);
+END;
+/
+
+-- Method 2
+SELECT count_nm from DUAL;
