@@ -30,3 +30,16 @@ BEGIN
 	END IF;
 END MinOfThree;
 /
+
+
+CREATE OR REPLACE FUNCTION count_nm 
+RETURN number IS 
+   tot number(7) := 0; 
+BEGIN 
+   SELECT count(S_NAME) into total 
+   FROM STUDENT
+   WHERE MARKS=65; 
+    
+   RETURN tot; 
+END; 
+/ 
